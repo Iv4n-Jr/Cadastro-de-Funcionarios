@@ -9,8 +9,7 @@ $QTDE_Salarios = $_POST["qtde_salarios"];
 $Salario_bruto = $QTDE_Salarios * 1518.00;
 $inss = 0.0;
 
-// Calculo INSS
-
+// Calculo INSS abaixo:
 // Faixa 1: até R$ 1.412,00 – 7,5%
 if ($Salario_bruto > 1412.00) {
     $inss += 1412.00 * 0.075;
@@ -60,9 +59,11 @@ if (mysqli_num_rows($result) > 0) {
         echo "<center>";
         echo "<hr>";
         echo "CONTA CADASTRADA";
-        echo "</hr>"; 
+        echo "</hr>";
+        echo "<a href=\"home_funcionarios.php\">RETORNAR</a>";
     } else {
         echo "Erro ao cadastrar: " . mysqli_error($conecta_db);
+        echo "<a href=\"home_funcionarios.php\">RETORNAR</a>";
     }
 }
 ?>
