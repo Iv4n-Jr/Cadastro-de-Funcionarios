@@ -58,7 +58,7 @@ if (!empty($_POST['busca_nome'])) {
             <?php }
             echo "<br>";
             echo "<center>";
-            echo "<a href=\"home_funcionarios.php\">RETORNAR AO LOGIN</a>"
+            echo "<a href=\"home_funcionarios.php\">RETORNAR</a>"
 
             ?>
 
